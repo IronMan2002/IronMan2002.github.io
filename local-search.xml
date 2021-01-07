@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Git</title>
+    <link href="/2021/01/07/hello-world%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <url>/2021/01/07/hello-world%20-%20%E5%89%AF%E6%9C%AC/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Git的用法"><a href="#Git的用法" class="headerlink" title="Git的用法"></a>Git的用法</h1><h2 id="1-github仓库和账号创建完毕"><a href="#1-github仓库和账号创建完毕" class="headerlink" title="1.github仓库和账号创建完毕"></a>1.github仓库和账号创建完毕</h2><h2 id="2-git版本控制"><a href="#2-git版本控制" class="headerlink" title="2.git版本控制"></a>2.git版本控制</h2><p>操作说明：</p><h3 id="1-创建"><a href="#1-创建" class="headerlink" title="1.创建"></a>1.创建</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git init 初始化仓库<br>git <span class="hljs-keyword">clone</span> <span class="hljs-title">拷贝仓库到本地</span><br></code></pre></td></tr></table></figure><p>此时应在本地创建一个文件夹</p><h3 id="2-提交"><a href="#2-提交" class="headerlink" title="2.提交"></a>2.提交</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">git <span class="hljs-keyword">add</span><span class="bash"> 把文件添加到仓库</span><br>git commit 提交文件<br>git rm 删除文件<br></code></pre></td></tr></table></figure><p>git commit后加-m <xxx>表示提交说明</p><h2 id="3-远程操作"><a href="#3-远程操作" class="headerlink" title="3.远程操作"></a>3.远程操作</h2><h3 id="以ssh协议将GitHub与本地仓库关联"><a href="#以ssh协议将GitHub与本地仓库关联" class="headerlink" title="以ssh协议将GitHub与本地仓库关联"></a>以ssh协议将GitHub与本地仓库关联</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;关联电子邮件&quot;</span><br>创建ssh key命令<br></code></pre></td></tr></table></figure><p>然后在GitHub中关联id_rsa.pub中的公钥</p><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">$ git remote <span class="hljs-keyword">add</span><span class="bash"> origin git@github.com:IronMan2002/learngit.git</span><br></code></pre></td></tr></table></figure><p>关联仓库</p><h3 id="远程推送命令-git-push"><a href="#远程推送命令-git-push" class="headerlink" title="远程推送命令**git push**"></a>远程推送命令**<em>git push**</em></h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> remote 操作远程库<br></code></pre></td></tr></table></figure><p>将文件添加到本地库后</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git push origin <span class="hljs-keyword">master</span> <span class="hljs-title">推送master</span>分支到GitHub<br></code></pre></td></tr></table></figure><p>推送到GitHub</p><h2 id="4-分支管理"><a href="#4-分支管理" class="headerlink" title="4.分支管理"></a>4.分支管理</h2><p><code>master</code>是主分支，<code>HEAD</code>指向的是当前分支。</p><p>可使用<code>git branch (名称)</code>创建新分支。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2021/01/05/hello-world/"/>
     <url>/2021/01/05/hello-world/</url>
