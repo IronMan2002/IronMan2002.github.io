@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-07 22:47" pubdate>
-        2021年1月7日 晚上
+      <time datetime="2021-01-15 01:35" pubdate>
+        2021年1月15日 凌晨
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      224 字
+      755 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      10
        分钟
     </span>
   
@@ -227,21 +227,51 @@
             <h1 style="display: none">Git</h1>
             
             <div class="markdown-body">
-              <h1 id="Git的用法"><a href="#Git的用法" class="headerlink" title="Git的用法"></a>Git的用法</h1><h2 id="1-github仓库和账号创建完毕"><a href="#1-github仓库和账号创建完毕" class="headerlink" title="1.github仓库和账号创建完毕"></a>1.github仓库和账号创建完毕</h2><h2 id="2-git版本控制"><a href="#2-git版本控制" class="headerlink" title="2.git版本控制"></a>2.git版本控制</h2><p>操作说明：</p>
-<h3 id="1-创建"><a href="#1-创建" class="headerlink" title="1.创建"></a>1.创建</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git init 初始化仓库<br>git <span class="hljs-keyword">clone</span> <span class="hljs-title">拷贝仓库到本地</span><br></code></pre></td></tr></table></figure>
-<p>此时应在本地创建一个文件夹</p>
-<h3 id="2-提交"><a href="#2-提交" class="headerlink" title="2.提交"></a>2.提交</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">git <span class="hljs-keyword">add</span><span class="bash"> 把文件添加到仓库</span><br>git commit 提交文件<br>git rm 删除文件<br></code></pre></td></tr></table></figure>
-<p>git commit后加-m <xxx>表示提交说明</p>
-<h2 id="3-远程操作"><a href="#3-远程操作" class="headerlink" title="3.远程操作"></a>3.远程操作</h2><h3 id="以ssh协议将GitHub与本地仓库关联"><a href="#以ssh协议将GitHub与本地仓库关联" class="headerlink" title="以ssh协议将GitHub与本地仓库关联"></a>以ssh协议将GitHub与本地仓库关联</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;关联电子邮件&quot;</span><br>创建ssh key命令<br></code></pre></td></tr></table></figure>
-<p>然后在GitHub中关联id_rsa.pub中的公钥</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">$ git remote <span class="hljs-keyword">add</span><span class="bash"> origin git@github.com:IronMan2002/learngit.git</span><br></code></pre></td></tr></table></figure>
-<p>关联仓库</p>
-<h3 id="远程推送命令-git-push"><a href="#远程推送命令-git-push" class="headerlink" title="远程推送命令**git push**"></a>远程推送命令**<em>git push**</em></h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> remote 操作远程库<br></code></pre></td></tr></table></figure>
-<p>将文件添加到本地库后</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git push origin <span class="hljs-keyword">master</span> <span class="hljs-title">推送master</span>分支到GitHub<br></code></pre></td></tr></table></figure>
-<p>推送到GitHub</p>
-<h2 id="4-分支管理"><a href="#4-分支管理" class="headerlink" title="4.分支管理"></a>4.分支管理</h2><p><code>master</code>是主分支，<code>HEAD</code>指向的是当前分支。</p>
-<p>可使用<code>git branch (名称)</code>创建新分支。</p>
+              <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="1-浏览器内核"><a href="#1-浏览器内核" class="headerlink" title="1.浏览器内核"></a>1.浏览器内核</h2><p>主要浏览器及其内核</p>
+<p>　　（1）trident：国内大多双核浏览器（ie、360急速、百度、猎豹安全、腾讯TT、Avant、世界之窗）的内核</p>
+<p>　　（2）edgeHTmL：IE内核（windows10之后，IE将其内置浏览器命名为Edge）</p>
+<p>　　（3）gecko：Firefox内核（开源，但打开速度慢、升级频繁、需要加载flash）</p>
+<p>　　（4）webkit：Safari内核（苹果公司），代表浏览器：傲游浏览器3、Apple Safari（win/iphone/ipad）、symbian手机浏览器、安卓默认浏览器</p>
+<p>　　（5）blink：谷歌内核（blink是webkit的分支，2013年4月3日，开始使用blink）</p>
+<p>　　（6）presto：opera前任内核（目前已投入使用blink）</p>
+<p>　 3、目前移动设备浏览器常用内核有webkit、blink、trident、gecko：</p>
+<p>　　（1）webkit：iphone和ipad等IOS平台内核，android4.4之前系统浏览器内核</p>
+<p>　　（2）blink：android4.4之后系统浏览器（chromium）内核</p>
+<p>​    （3）trident ：windows phone 8系统浏览器内核</p>
+<h2 id="2-框架"><a href="#2-框架" class="headerlink" title="2.框架"></a>2.框架</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;zh-cn&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>其中：lang表示网站语言</p>
+<head></head>代表文件头，包含网站标题及字符集
+
+<body></body>代表文档的主体
+
+<h2 id="3-元素"><a href="#3-元素" class="headerlink" title="3.元素"></a>3.元素</h2><p>1、标题标签：<h1></h1>到<h6></h6>，依次递减.</p>
+<p>2、段落标签：<p></p></p>
+<p>3、水平线：  <hr />或者<hr/>或者 <hr></p>
+<p>4、链接:    <a href="default.htm"></a></p>
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h1 id="1-盒子"><a href="#1-盒子" class="headerlink" title="1.盒子"></a>1.盒子</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">div</span> &#123;<br>    <span class="hljs-attribute">background-color</span>: lightgrey;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">25px</span> solid green;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">25px</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">25px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>css盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
+<h2 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2.选择器"></a>2.选择器</h2><p>css选择器用于选择元素的样式的模式。</p>
+<p>1.css属性选择器</p>
+<p>由css命名及后面属性及属性值构成一个完整。<br>代码如下</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">abab&#123;<span class="hljs-string">...</span> <span class="hljs-string">...</span> 属性及值&#125;<br></code></pre></td></tr></table></figure>
+<p>abab被称为css命名名称，<br>而跟后面花括号内容及divcss5一起被称为CSS属性选择器</p>
+<p>2.子选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> &gt; <span class="hljs-selector-tag">strong</span> &#123;<span class="hljs-attribute">color</span>:red;&#125;<br></code></pre></td></tr></table></figure>
+<p>选择作为 h1 元素子元素的所有 strong 元素</p>
+<p>3.相邻兄弟选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> + <span class="hljs-selector-tag">p</span> &#123;<span class="hljs-attribute">margin-top</span>:<span class="hljs-number">50px</span>;&#125;<br></code></pre></td></tr></table></figure>
+<p>选择紧接在 h1 元素后出现的段落，h1 和 p 元素拥有共同的父元素</p>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><h2 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h2><p><strong>JavaScript数据类型：</strong></p>
+<p>值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol。</p>
+<h2 id="2-数组"><a href="#2-数组" class="headerlink" title="2.数组"></a>2.数组</h2><p>创建数组</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="javascript"><span class="hljs-keyword">var</span> mycars = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>()</span><br><span class="javascript">mycars[<span class="hljs-number">0</span>] = <span class="hljs-string">&quot;Saab&quot;</span></span><br><span class="javascript">mycars[<span class="hljs-number">1</span>] = <span class="hljs-string">&quot;Volvo&quot;</span></span><br><span class="javascript">mycars[<span class="hljs-number">2</span>] = <span class="hljs-string">&quot;BMW&quot;</span></span><br><br><span class="javascript"><span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>;i&lt;mycars.length;i++)</span><br>&#123;<br><span class="javascript"><span class="hljs-built_in">document</span>.write(mycars[i] + <span class="hljs-string">&quot;&lt;br /&gt;&quot;</span>)</span><br>&#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+<p>创建,赋值并输出数组</p>
+<h2 id="3-对象"><a href="#3-对象" class="headerlink" title="3.对象"></a>3.对象</h2><p>在 JavaScript 中，对象是数据（变量），拥有属性和方法。</p>
+<p>1.创建对象</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs dust"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="xml">var Object=</span><span class="hljs-template-variable">&#123;&#125;</span><span class="xml">;/* 声明对象字面变量*/</span><br><span class="xml">Object.name=&quot;Jener&quot;;/*向对象添加新成员*/</span><br><span class="xml">Object.age=25;</span><br><span class="xml">alert(Object.name);/*利用弹窗输出对象name属性值*/</span><br><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+<p>2.访问</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">console.log(<span class="hljs-keyword">object</span>.name);<br>        console.log(<span class="hljs-keyword">object</span>[&quot;name&quot;]);<br>        <span class="hljs-keyword">object</span>.name();<br>        <span class="hljs-keyword">object</span>[&quot;name&quot;]();<br></code></pre></td></tr></table></figure>
+<p>读取并访问对象.</p>
 
             </div>
             <hr>
@@ -265,18 +295,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/01/15/hello-world%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/01/05/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2021/01/07/hello-world%20-%20%E5%89%AF%E6%9C%AC/">
+                        <span class="hidden-mobile">Git</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
