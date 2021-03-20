@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>CTF</title>
+    <link href="/2021/03/20/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
+    <url>/2021/03/20/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/</url>
+    
+    <content type="html"><![CDATA[<h1 id="CTF的概念"><a href="#CTF的概念" class="headerlink" title="CTF的概念"></a>CTF的概念</h1><p>CTF是一种流行的信息安全竞赛形式，其英文名可直译为“夺得Flag”，也可意译为“夺旗赛”。其大致流程是，参赛团队之间通过进行攻防对抗、程序分析等形式，率先从主办方给出的比赛环境中得到一串具有一定格式的字符串或其他内容，并将其提交给主办方，从而夺得分数。为了方便称呼，我们把这样的内容称之为“Flag”。</p><h1 id="CTF的比赛模式"><a href="#CTF的比赛模式" class="headerlink" title="CTF的比赛模式"></a>CTF的比赛模式</h1><p>一、解题模式（Jeopardy）</p><p>在解题模式CTF赛制中，参赛队伍可以通过互联网或者现场网络参与，这种模式的CTF竞赛与ACM编程竞赛、<a href="https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E5%AD%A6%E5%A5%A5%E8%B5%9B/1147921">信息学奥赛</a>比较类似，以解决网络安全技术挑战题目的分值和时间来排名，通常用于在线选拔赛。题目主要包含逆向、漏洞挖掘与利用、Web渗透、密码、取证、隐写、安全编程等类别。</p><p>二、攻防模式（Attack-Defense）</p><p>在攻防模式CTF赛制中，参赛队伍在网络空间互相进行攻击和防守，挖掘网络服务漏洞并攻击对手服务来得分，修补自身服务漏洞进行防御来避免丢分。攻防模式CTF赛制可以实时通过得分反映出比赛情况，最终也以得分直接分出胜负，是一种竞争激烈，具有很强观赏性和高度透明性的网络安全赛制。在这种赛制中，不仅仅是比参赛队员的智力和技术，也比体力（因为比赛一般都会持续48小时及以上），同时也比团队之间的分工配合与合作。 </p><p>三、混合模式（Mix）</p><p>结合了解题模式与攻防模式的CTF<a href="https://baike.baidu.com/item/%E8%B5%9B%E5%88%B6">赛制</a>，比如参赛队伍通过解题可以获取一些初始分数，然后通过攻防对抗进行得分增减的零和游戏，最终以得分高低分出胜负。采用混合模式CTF赛制的典型代表如iCTF国际CTF竞赛。</p><h1 id="方向类型"><a href="#方向类型" class="headerlink" title="方向类型"></a>方向类型</h1><p><img src="C:\Users\lily\AppData\Roaming\Typora\typora-user-images\image-20210320180822352.png" alt="image-20210320180822352"></p><p><img src="C:\Users\lily\AppData\Roaming\Typora\typora-user-images\image-20210320180846241.png" alt="image-20210320180846241"></p><h1 id="一些可能用到的工具-网站"><a href="#一些可能用到的工具-网站" class="headerlink" title="一些可能用到的工具/网站"></a>一些可能用到的工具/网站</h1><p><a href="https://www.ctftools.com/down/">工具站</a></p><p>1.CTF起步指南：<a href="https://link.zhihu.com/?target=http://blog.idf.cn/2014/06/how-to-get-started-in-ctf/">如何开始CTF比赛之旅</a><br>2.网站：FreeBuf、 乌云<br>3.逆向：看雪学院CrackMe、ReverseMe, <a href="https://link.zhihu.com/?target=http://www.crackmes.de">Crackmes.de - Welcome to the longest running and most complete Crackmes web page on the internet.</a>、BLACKBOX<br>4.杂志《安全参考》《乌云月报》<br>5.博客  各安全大牛博客，<a href="https://link.zhihu.com/?target=http://217.logdown.com/">217’s Blog、http://blog.0ops.net/</a>、<br>6.writeup参考 [CTF Writeup Summary <a href="https://link.zhihu.com/?target=http://sec.yka.me/">CTF Writeup Summary]</a>、<a href="https://link.zhihu.com/?target=http://www.hackdog.me/writeup/">writeup”&gt;//**/</a><br>7.题库：<a href="https://link.zhihu.com/?target=http://oj.xctf.org.cn/notices">XCTF_OJ竞赛平台、http://ctf.idf.cn/</a>等</p><p>8.<a href="https://link.zhihu.com/?target=https://butian.360.cn/">补天 - 企业和白帽子共赢的漏洞响应平台，帮助企业建立SRC，库带计划</a></p><p>（来源链接：<a href="https://www.zhihu.com/question/30505597/answer/48335776%EF%BC%89">https://www.zhihu.com/question/30505597/answer/48335776）</a></p><h1 id="加油！"><a href="#加油！" class="headerlink" title="加油！"></a>加油！</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>前端</title>
     <link href="/2021/01/15/hello-world%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC/"/>
     <url>/2021/01/15/hello-world%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC/</url>
