@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
+  <link rel="icon" type="image/png" href="/img/favicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>ICPC_ACM - LLY&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"BRFdAbhH6nxWqsUkEh2dKLct-gzGzoHsz","app_key":"XrFSg5TT4aAQE0UtW0EkRHKP","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LLY's blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="ICPC_ACM">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-11 09:09" pubdate>
+        2021年8月11日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      34
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">ICPC_ACM</h1>
+            
+            <div class="markdown-body">
+              <h1 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h1><h2 id="一，P1035-NOIP2002-普及组-级数求和"><a href="#一，P1035-NOIP2002-普及组-级数求和" class="headerlink" title="一，P1035 [NOIP2002 普及组] 级数求和"></a>一，P1035 [NOIP2002 普及组] 级数求和</h2><p>讲真这一题第一次没有ac属实不应该，float的精度问题让几个数据没过，还是用double比较好。用最基础的遍历，ac代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">float</span> a,b=<span class="hljs-number">0</span>,c=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">int</span> i;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; b &lt; a; ++i) &#123;<br>        b=b+<span class="hljs-number">1</span>/i;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;i;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<p>记一个数学题解</p>
+<p><strong>数论（调和级数）</strong></p>
+<p>关于<strong>调和级数</strong>的姿势，点<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0/8019971?fr=aladdin">这里</a>。</p>
+<p>已知Sn=1+1/2+1/3+…+1/n=\sum_{k=1}^{n}\frac{1}{k}<em>S**n</em>=1+1/2+1/3+…+1/<em>n</em>=∑<em>k</em>=1<em>n**k</em>1。</p>
+<p>明显地，Sn<em>S**n</em>为第n<em>n</em>个调和数。</p>
+<p>欧拉推导过求调和级数有限多项和的表达式为\sum_{k=1}^{n}\frac{1}{k}=\ln(n+1)+\gamma∑<em>k</em>=1<em>n**k</em>1=ln(<em>n</em>+1)+<em>γ</em>，我们拿过来用即可。（\gamma<em>γ**</em>约**等于0.5772156649）</p>
+<p>我们需要满足Sn&gt;k<em>S**n</em>&gt;<em>k</em>，即满足\ln(n+1)+\gamma&gt;kln(<em>n</em>+1)+<em>γ</em>&gt;<em>k</em>，化简得n&gt;e^{k-\gamma}-1<em>n</em>&gt;<em>e**k</em>−<em>γ</em>−1。</p>
+<p>我们只需求满足上式的最小的n<em>n</em>，所以n=e^{k-\gamma}+0.5<em>n</em>=<em>e**k</em>−<em>γ</em>+0.5（四舍五入），即模拟做法的时间复杂度为O(e^{k-\gamma})<em>O</em>(<em>e**k</em>−<em>γ</em>)。</p>
+<p>关于\gamma<em>γ</em>（<strong>欧拉-马歇罗尼常数</strong>）的姿势，点<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%AC%A7%E6%8B%89%E5%B8%B8%E6%95%B0/5371177?fr=aladdin">这里</a>。</p>
+<p>代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> gamma=<span class="hljs-number">0.5772156649</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">int</span> k,n;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;k);<br>    n=<span class="hljs-built_in">exp</span>(k-gamma)+<span class="hljs-number">0.5</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,n);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>空间复杂度O(1)<em>O</em>(1)</p>
+<p>时间复杂度O(???)<em>O</em>(???)</p>
+<p>（因为不知道math.h头文件中的<strong>exp函数</strong>的时间复杂度，所以不知道时间复杂度）</p>
+<h2 id="二，P1307-NOIP2011-普及组-数字反转"><a href="#二，P1307-NOIP2011-普及组-数字反转" class="headerlink" title="二，P1307 [NOIP2011 普及组] 数字反转"></a>二，P1307 [NOIP2011 普及组] 数字反转</h2><p>换位输出，挺聪明伐。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">int</span> n,s=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><span class="hljs-comment">//以上应该都懂，不解释</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;n;<span class="hljs-comment">//烦死了输入</span><br>    <span class="hljs-keyword">while</span>(n) s=s*<span class="hljs-number">10</span>+n%<span class="hljs-number">10</span>,n/=<span class="hljs-number">10</span>;<span class="hljs-comment">//如果n不是0，就一直s让一位，腾个0出来，n最后一位跟上去，再无情地抛弃了最后一位（突然想对n说：你无情你冷酷你无理取闹！）</span><br>    <span class="hljs-built_in">cout</span>&lt;&lt;s;<span class="hljs-comment">//烦死了输出</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>再记录一种字符串操作</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-built_in">string</span> s1,s2;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><span class="hljs-comment">//不解释</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;s1;<br>    <span class="hljs-keyword">if</span>(s1[<span class="hljs-number">0</span>]==<span class="hljs-string">&#x27;-&#x27;</span>)<br>    &#123;<br>        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;-&quot;</span>;<span class="hljs-comment">//输出负号</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=s1.length()<span class="hljs-number">-1</span>,j=<span class="hljs-number">0</span>;i&gt;=<span class="hljs-number">1</span>;i--,j++) s2=s2+s1[i];<span class="hljs-comment">//倒着变成正的（好烦）</span><br>        <span class="hljs-keyword">if</span>(s2[<span class="hljs-number">0</span>]==<span class="hljs-string">&#x27;0&#x27;</span>) s2.erase(<span class="hljs-number">0</span>,s2.find_first_not_of(<span class="hljs-string">&#x27;0&#x27;</span>));<span class="hljs-comment">//去0</span><br>        <span class="hljs-built_in">cout</span>&lt;&lt;s2;<span class="hljs-comment">//输出</span><br>    &#125;<br>    <span class="hljs-keyword">else</span> <span class="hljs-comment">//否则为正</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=s1.length()<span class="hljs-number">-1</span>,j=<span class="hljs-number">0</span>;i&gt;=<span class="hljs-number">0</span>;i--,j++) s2=s2+s1[i];<span class="hljs-comment">//正着倒序（还是好烦吧）</span><br>        <span class="hljs-keyword">if</span>(s2[<span class="hljs-number">0</span>]==<span class="hljs-string">&#x27;0&#x27;</span>)s2.erase(<span class="hljs-number">0</span>,s2.find_first_not_of(<span class="hljs-string">&#x27;0&#x27;</span>));<span class="hljs-comment">//删除0</span><br>        <span class="hljs-built_in">cout</span>&lt;&lt;s2;<span class="hljs-comment">//输出</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<span class="hljs-comment">//终于结束了</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ylwn817/articles/1967689.html">C++中string erase函数的使用(转载)</a></p>
+<p>erase函数的原型如下：<br>（1）string&amp; erase ( size_t pos = 0, size_t n = npos );<br>（2）iterator erase ( iterator position );<br>（3）iterator erase ( iterator first, iterator last );<br>也就是说有三种用法：<br>（1）erase(pos,n); 删除从pos开始的n个字符，比如erase(0,1)就是删除第一个字符<br>（2）erase(position);删除position处的一个字符(position是个string类型的迭代器)<br>（3）erase(first,last);删除从first到last之间的字符（first和last都是迭代器）<br>下面给你一个例子：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">str</span> <span class="hljs-params">(<span class="hljs-string">&quot;This is an example phrase.&quot;</span>)</span></span>;<br>  <span class="hljs-built_in">string</span>::iterator it;<br><br>  <span class="hljs-comment">// 第(1)种用法</span><br>  str.erase (<span class="hljs-number">10</span>,<span class="hljs-number">8</span>);<br>  <span class="hljs-built_in">cout</span> &lt;&lt; str &lt;&lt; <span class="hljs-built_in">endl</span>;        <span class="hljs-comment">// &quot;This is an phrase.&quot;</span><br><br>  <span class="hljs-comment">// 第(2)种用法</span><br>  it=str.<span class="hljs-built_in">begin</span>()+<span class="hljs-number">9</span>;<br>  str.erase (it);<br>  <span class="hljs-built_in">cout</span> &lt;&lt; str &lt;&lt; <span class="hljs-built_in">endl</span>;        <span class="hljs-comment">// &quot;This is a phrase.&quot;</span><br><br>  <span class="hljs-comment">// 第(3)种用法</span><br>  str.erase (str.<span class="hljs-built_in">begin</span>()+<span class="hljs-number">5</span>, str.<span class="hljs-built_in">end</span>()<span class="hljs-number">-7</span>);<br>  <span class="hljs-built_in">cout</span> &lt;&lt; str &lt;&lt; <span class="hljs-built_in">endl</span>;        <span class="hljs-comment">// &quot;This phrase.&quot;</span><br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>1、find_first_of()函数</strong></p>
+<p>正向查找在原字符串中第一个与指定字符串（或字符）中的某个字符匹配的字符，返回它的位置。若查找失败，则返回npos。（npos定义为保证大于任何有效下标的值。）</p>
+<p>string str=“abcdefab”;<br>cout&lt;&lt;str.find_first_of(“hce”)&lt;&lt;endl;//待查串hce第一个出现在原串str中的字符是c，返回str中c的下标2,故结果为2。第二个参数为0，默认从原串下标为0开始正向查。<br>cout&lt;&lt;str.find_first_of(“ab”,1)&lt;&lt;endl;//从下标为1开始查，待查串ab第一个出现在原串str中的字符是b，返回b的下标，结果为1。</p>
+<p><strong>2、find_last_of()函数</strong></p>
+<p>逆向查找在原字符串中最后一个与指定字符串（或字符）中的某个字符匹配的字符，返回它的位置。若查找失败，则返回npos。（npos定义为保证大于任何有效下标的值。）</p>
+<p>string str=“abcdefab”;<br>cout&lt;&lt;str.find_last_of(“wab”)&lt;&lt;endl;//原串最后一个字符首先与待查子串的每一个字符一一比较，一旦有相同的就输出原串该字符的下标.。结果为b的下标7。第二个参数为0，默认为npos。<br>cout&lt;&lt;str.find_last_of(“wab”,5)&lt;&lt;endl;//从原串中下标为5开始逆向查找，首先f与待查子串每一字符比较，若有相同的就输出该字符在原串的下标。若一个都没有，就依次逆向比较，即e再与待查子串一一比较，直到原串的b与待查子串中的b相同，然后输出该b在原串的下标1。</p>
+<p><strong>3、find_first_not_of()函数</strong></p>
+<p><strong>正向查找在原字符串中第一个与指定字符串（或字符）中的任一字符都不匹配的字符，返回它的位置。若查找失败，则返回npos。（npos定义为保证大于任何有效下标的值。）</strong></p>
+<ul>
+<li>string str=“abcdefab”;</li>
+<li>cout&lt;&lt;str.find_first_not_of(‘h’)&lt;&lt;endl;//第二个参数为0,默认从原串下标为0开始查找。第一个a就和带查字符不同，故输出a的下标0。</li>
+<li>cout&lt;&lt;str.find_first_not_of(“twj”,1)&lt;&lt;endl;//从下标为1开始查，第一个b就和待查子串任一字符不同，故输出b的下标1。</li>
+</ul>
+<p><strong>4、find_last_not_of()函数</strong></p>
+<p><strong>正向查找在原字符串中最后一个与指定字符串（或字符）中的任一字符都不匹配的字符，返回它的位置。若查找失败，则返回npos。（npos定义为保证大于任何有效下标的值。）</strong></p>
+<ul>
+<li>string str=“abcdefab”;</li>
+<li>cout&lt;&lt;str.find_last_not_of(‘h’)&lt;&lt;endl;//第二个参数为0，默认从npos逆向查。原串倒数第一个字符b和h就不同，故输出b的小标7。</li>
+<li>cout&lt;&lt;str.find_last_not_of(“ab”,6)&lt;&lt;endl;//从原串下标为6开始逆向查询，第一个a和待查串中的字符a相同，不符合，故继续逆向比较。f和待查子串任一字符不同，故输出f的下标5。</li>
+</ul>
+
+        <div id="aplayer-ZaxqKFCN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content">[ti:��Ġ��������! (�׳����࣡)]
+[ar:Linked Horizon]
+[al:�M�Ĥ�܉�E (�����Ĺ켣)]
+[by:]
+[offset:0]
+[kana:1����1����1����11111��1���礯1��1���礦1��1����1��1����1����1�뤤1����1����1��1�Ȥ�1�Ȥ�1�ȤӤ�1����1����1��1�Ҥ�1��1��1�ۤ�1�ޤ�1����1�䤯1��1����1��1��1��1����1��1���1���1��1��1����1�Ƥ�1��1����1�ҤȤ�1����1����1��1�ʤ�1��1����1��1����1���Τ�1���ޤ���1����1��1����1����1����1����1����1����1��1����1����2�Ȥ�1����1����1����1����1����1����1��1�餤1��1��1�Ҥ�1��1��1���Ĥ�1���1���1��1����1��1�Ƥ�1��1����1����1��1����1����1�ʤ�1�ޤ�1����1��1�ۤ�1��1�����1����1�����1����1��1��1����1����1����1����1����1����1��1��礯1����2�Ȥ�1����1����1����1����1����1����1����1���礦1��1��1�Ĥ�1��1��1����1��1��1���2�Ҥ�1��1�Ĥ�1��1����1�Ԥ�1�Τ�1���1��1����1����1����1��1��1����1����1����1�魯1����1���ʤ�1��1����1��1��1����1��1�ߤ�1����2�Ф���1�Ĥ�1����1����2���Τ�1����1��1�Ȥ���1��1����1��1����1���礦1��1�䤯1����1��1�餯1����1��1��1����1�뤤1����1��1��1�Ϥ�1���礦1��1�Ȥ�1����1�ʤ�1�Ȥ�1����1���礯2��������1���1��1����1�ĤФ�1��1��1��1����1��1�椦1�ߤ�1����1����1����1����1����1����1��1�ʤ�1����2�Ȥ�1����1����1����1����1����1����1�Ϥ���1���Τ�1��1���1��1��1����1����1����1����1����1�ۤ�1��1����1��1����1��]
+[00:00.00]��Ġ��������! (�׳����࣡) - Linked Horizon
+[00:05.82]�ʣ�Revo
+[00:06.85]����Revo
+[00:08.31]�������Ϥεتz��
+[00:11.14]�o�����������Ť������ä�
+[00:14.13]������������դ�
+[00:17.09]���Ĥ���ͻ��
+[00:20.20]���ߵ������
+[00:23.15]�~�����᤯�o������
+[00:26.22]�Ф��줶��Ķ�εƤ�
+[00:29.16]�����Τ褦��
+[00:32.38]�^�����դ��Y�Ф���
+[00:35.34]ū�Ȥ��l�𤹤٤�����
+[00:38.34]�����դɤ��� ͫ��
+[00:41.33]���_��Ҋ�Ĥ�Ƥ���
+[00:44.33]�Τ�ΤƤ�А�ħ����褲�룿
+[00:47.55]������ �ꤵ��
+[00:50.12]�Q����ϧ�����ʤɤϤʤ�
+[00:53.17]������ ������ ��Ġ��������
+[00:59.21]ȫ�ƤΠ�����
+[01:02.23]�񤳤�˲�g�Τ����
+[01:05.21]������ ������ ��Ġ��������
+[01:11.18]�M��٤�δ����
+[01:14.16]�����֤��Ф��ؤ�
+[01:30.94]�^�����դ�Τ���
+[01:33.86]ū�Ȥ��������٤�����
+[01:36.86]�����դɤ������ ���~��
+[01:39.86]���������_�äƤ���
+[01:42.81]�Τ�ѧ�٤А�ħ�������룿
+[01:46.06]���g�Ǥ� ���g�Ǥ�
+[01:48.57]ȫ�Ɵo�j�ˤʤɤ��ʤ�
+[01:51.65]������ ������ ��Ġ��������
+[01:57.65]ȫ�Ƥ�Ŭ���� �񤳤�˲�g�Ξ��
+[02:03.68]������ ������ ��Ġ��������
+[02:09.70]֎���٤������� �����֤����ȡ��
+[02:29.49]�����֪��ʤ������郎
+[02:32.24]���g���Ƥ�򤷤Ƥ䤬��
+[02:35.29]����������һƥ�Ф餺
+[02:38.10]ū����l�𤷤Ƥ��
+[02:41.38]������Ԥ��������Τ��l����
+[02:44.38]������������㤤�ʤ���
+[02:47.38]������ʤ�ŭ�꤬����
+[02:50.18]�ؤ��l�𤷤Ƥ��
+[02:53.09]��� �x�ӻڤ��������Ȥ�
+[02:56.30]�ɤ�ʾ�ɫ�˿����äƤ��룿
+[02:59.16]Ψ �����줿������Z�ˆD��
+[03:02.74]�𤭱˰�(���)�΄���(Sieg)
+[03:05.32]�s���εؤϘS�@�ι���
+[04:23.39]������ ���˼��������
+[04:26.15]��ĥ��֧�䤵��Ƥ����ֲ���
+[04:29.88]�B�\���Ф������Ƥ��������
+[04:35.32]�ƻ��ʸ����� ����ؓ��
+[04:41.14]����܉�E�����ɤؤ� ���Ȥʤ�
+[04:48.93]������ ������ ��Ġ��������
+[04:55.42]ȫ�Ƥο��y�� �񤳤�˲�g�Ξ��
+[05:01.39]������ ������ ��Ġ��������
+[05:07.43]�������� ȼ���빭ʸ�ˉ䤨��
+[05:13.42]������ ������ ��Ġ��������
+[05:19.40]�F��٤�܉�E�� ���������褭����</pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-ZaxqKFCN"),
+            narrow: false,
+            autoplay: false,
+            showlrc: 2,
+            music: {
+              title: "心臓を捧げよ___献出心脏",
+              author: "Linked_Horizon",
+              url: "b.mp3",
+              pic: "/2021/08/11/语言基础/b.jpg",
+              lrc: "b.lrc"
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/08/10/title/">
+                        <span class="hidden-mobile">ICPC_ACM</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "BRFdAbhH6nxWqsUkEh2dKLct-gzGzoHsz",
+          app_key: "XrFSg5TT4aAQE0UtW0EkRHKP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a target="_blank" rel="noopener" href="http://www.biaobaishike.com/web.php?id=NMlEl8m"><span>I</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="noopener" href="http://www.biaobaishike.com/web.php?id=NMlEl8m"><span>YOU</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/dist/music.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
