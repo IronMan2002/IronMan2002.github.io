@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.8k 字
+      2.6k 字
     </span>
   
 
@@ -196,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      41
+      39
        分钟
     </span>
   
@@ -236,13 +236,8 @@
 <p>记一个数学题解</p>
 <p><strong>数论（调和级数）</strong></p>
 <p>关于<strong>调和级数</strong>的姿势，点<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0/8019971?fr=aladdin">这里</a>。</p>
-<p>已知Sn=1+1/2+1/3+…+1/n=\sum_{k=1}^{n}\frac{1}{k}<em>S**n</em>=1+1/2+1/3+…+1/<em>n</em>=∑<em>k</em>=1<em>n**k</em>1。</p>
-<p>明显地，Sn<em>S**n</em>为第n<em>n</em>个调和数。</p>
-<p>欧拉推导过求调和级数有限多项和的表达式为\sum_{k=1}^{n}\frac{1}{k}=\ln(n+1)+\gamma∑<em>k</em>=1<em>n**k</em>1=ln(<em>n</em>+1)+<em>γ</em>，我们拿过来用即可。（\gamma<em>γ**</em>约**等于0.5772156649）</p>
-<p>我们需要满足Sn&gt;k<em>S**n</em>&gt;<em>k</em>，即满足\ln(n+1)+\gamma&gt;kln(<em>n</em>+1)+<em>γ</em>&gt;<em>k</em>，化简得n&gt;e^{k-\gamma}-1<em>n</em>&gt;<em>e**k</em>−<em>γ</em>−1。</p>
-<p>我们只需求满足上式的最小的n<em>n</em>，所以n=e^{k-\gamma}+0.5<em>n</em>=<em>e**k</em>−<em>γ</em>+0.5（四舍五入），即模拟做法的时间复杂度为O(e^{k-\gamma})<em>O</em>(<em>e**k</em>−<em>γ</em>)。</p>
-<p>关于\gamma<em>γ</em>（<strong>欧拉-马歇罗尼常数</strong>）的姿势，点<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%AC%A7%E6%8B%89%E5%B8%B8%E6%95%B0/5371177?fr=aladdin">这里</a>。</p>
-<p>代码：</p>
+<p><img src="https://i.loli.net/2021/08/13/OZmswkM6uBzeGhq.png" srcset="/img/loading.gif"></p>
+<p>关于<em>γ</em>（<strong>欧拉-马歇罗尼常数</strong>）的姿势，点<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%AC%A7%E6%8B%89%E5%B8%B8%E6%95%B0/5371177?fr=aladdin">这里</a>。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> gamma=<span class="hljs-number">0.5772156649</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">int</span> k,n;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;k);<br>    n=<span class="hljs-built_in">exp</span>(k-gamma)+<span class="hljs-number">0.5</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,n);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>空间复杂度O(1)<em>O</em>(1)</p>
 <p>时间复杂度O(???)<em>O</em>(???)</p>
@@ -275,7 +270,7 @@
 <li>cout&lt;&lt;str.find_last_not_of(“ab”,6)&lt;&lt;endl;//从原串下标为6开始逆向查询，第一个a和待查串中的字符a相同，不符合，故继续逆向比较。f和待查子串任一字符不同，故输出f的下标5。</li>
 </ul>
 
-        <div id="aplayer-rBDkUkIT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-KsNgogsq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content">[ti:心臓を捧げよ! (献出心脏！)]
 [ar:Linked Horizon]
 [al:進撃の軌跡 (进击的轨迹)]
@@ -344,7 +339,7 @@
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-rBDkUkIT"),
+            element: document.getElementById("aplayer-KsNgogsq"),
             narrow: false,
             autoplay: false,
             showlrc: 2,

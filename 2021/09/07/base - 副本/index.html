@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
+  <link rel="icon" type="image/png" href="/img/favicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>语言基础 - LLY&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"BRFdAbhH6nxWqsUkEh2dKLct-gzGzoHsz","app_key":"XrFSg5TT4aAQE0UtW0EkRHKP","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LLY's blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="语言基础">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-09-07 14:36" pubdate>
+        2021年9月7日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">语言基础</h1>
+            
+            <div class="markdown-body">
+              <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1>
+        <div id="aplayer-JaDvRMTv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content">[ti:心臓を捧げよ! (献出心脏！)]
+[ar:Linked Horizon]
+[al:進撃の軌跡 (进击的轨迹)]
+[by:]
+[offset:0]
+[kana:1しん1ぞう1ささ11111し1きょく1い1じょう1じ1ごく1な1しん1じん1るい1さい1あく1ひ1とう1とつ1とびら1たた1おと1た1ひど1む1さ1ほう1まね1さい1やく1ひ1あく1む1す1ひ1うら1ぎ1もの1やつ1ら1く1ちく1てき1ひ1かお1ひとみ1おれ1たち1み1なに1す1あく1ま1しの1いのち1たましい1けっ1お1ささ1ささ1しん1ぞう1ささ1すべ1ぎ1せい1いま2とき1ささ1ささ1しん1ぞう1ささ1すす1み1らい1て1き1ひら1す1ひ1いつわ1もの1やつ1ら1ぞう1お1てき1ひ1こえ1こと1ば1おれ1かた1なに1まな1あく1ま1ほふ1ぎ1じゅつ1せん1じゅつ1すべ1む1だ1ささ1ささ1しん1ぞう1ささ1すべ1ど1りょく1いま2とき1ため1ささ1ささ1しん1ぞう1ささ1うた1しょう1り1て1つか1と1え1たい1し1ば1もの2ひと1に1つら1よ1いっ1ぴき1のこ1やつ1く1ちく1さい1しょ1い1だ1だれ1こと1おぼ1わす1いか1かなら1く1ちく1あ1あ1えら1く1みち1さき2ばしょ1つな1ただ1ささ2いのち1かて1さ1とうと1ひ1がん1ひ1がん1しょう1り1やく1そく1ち1らく1えん1は1ひ1じん1るい1おも1だ1し1はい1きょう1ふ1とり1かご1なか1とら1くつ1じょく2たそがれ1ゆみ1や1かけ1つばさ1せ1お1き1せき1じ1ゆう1みち1ささ1ささ1しん1ぞう1ささ1すべ1く1なん1いま2とき1ため1ささ1ささ1しん1ぞう1ささ1はかな1いのち1も1ゆみ1や1か1ささ1ささ1しん1ぞう1ささ1ほこ1き1せき1み1えが1だ]
+[00:00.00]心臓を捧げよ! (献出心脏！) - Linked Horizon
+[00:05.82]词：Revo
+[00:06.85]曲：Revo
+[00:08.31]これ以上の地獄は
+[00:11.14]無いだろうと信じたかった
+[00:14.13]されど人類最悪の日は
+[00:17.09]いつも唐突に
+[00:20.20]扉を叩く音は
+[00:23.15]絶えず酷く無作法で
+[00:26.22]招かれざる災厄の灯は
+[00:29.16]悪夢のように
+[00:32.38]過ぎし日を裏切る者
+[00:35.34]奴等は駆逐すべき敵だ
+[00:38.34]あの日どんな顔で 瞳で
+[00:41.33]俺達を見つめていた
+[00:44.33]何を捨てれば悪魔をも凌げる？
+[00:47.55]命さえ 魂さえ
+[00:50.12]決して惜しくなどはない
+[00:53.17]捧げよ 捧げよ 心臓を捧げよ
+[00:59.21]全ての犠牲は
+[01:02.23]今この瞬間のために
+[01:05.21]捧げよ 捧げよ 心臓を捧げよ
+[01:11.18]進むべき未来を
+[01:14.16]その手で切り拓け
+[01:30.94]過ぎし日を偽る者
+[01:33.86]奴等は憎悪すべき敵だ
+[01:36.86]あの日どんな声で 言葉で
+[01:39.86]俺たちを騙っていた
+[01:42.81]何を学べば悪魔をも屠れる？
+[01:46.06]技術でも 戦術でも
+[01:48.57]全て無駄になどしない
+[01:51.65]捧げよ 捧げよ 心臓を捧げよ
+[01:57.65]全ての努力は 今この瞬間の為に
+[02:03.68]捧げよ 捧げよ 心臓を捧げよ
+[02:09.70]謳うべき勝利を その手で掴み取れ
+[02:29.49]得体の知れない化け物が
+[02:32.24]人間と似た顔をしてやがる
+[02:35.29]この世から一匹残らず
+[02:38.10]奴らを駆逐してやる
+[02:41.38]最初に言い出したのは誰か？
+[02:44.38]そんな事憶えちゃいないが
+[02:47.38]忘れられない怒りがある
+[02:50.18]必ず駆逐してやる
+[02:53.09]嗚呼 選び悔いた道の先は
+[02:56.30]どんな景色に繋がっている？
+[02:59.16]唯 捧れられた人生を糧に咲く
+[03:02.74]尊き彼岸(悲願)の勝利(Sieg)
+[03:05.32]約束の地は楽園の果て
+[04:23.39]あの日 人類は思い出した
+[04:26.15]ヤツラに支配されていた恐怖を
+[04:29.88]鳥籠の中に囚われていた屈辱を
+[04:35.32]黄昏を弓矢は翔る 翼を背負い
+[04:41.14]その軌跡が自由への 道となる
+[04:48.93]捧げよ 捧げよ 心臓を捧げよ
+[04:55.42]全ての苦難は 今この瞬間の為に
+[05:01.39]捧げよ 捧げよ 心臓を捧げよ
+[05:07.43]儚き命を 燃える弓矢に変えて
+[05:13.42]捧げよ 捧げよ 心臓を捧げよ
+[05:19.40]誇るべき軌跡を その身で描き出せ</pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-JaDvRMTv"),
+            narrow: false,
+            autoplay: false,
+            showlrc: 2,
+            music: {
+              title: "心臓を捧げよ___献出心脏",
+              author: "Linked_Horizon",
+              url: "b.mp3",
+              pic: "/2021/09/07/base%20-%20副本/b.jpg",
+              lrc: "b.lrc"
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/08/12/zz/">
+                        <span class="hidden-mobile">一封信</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "BRFdAbhH6nxWqsUkEh2dKLct-gzGzoHsz",
+          app_key: "XrFSg5TT4aAQE0UtW0EkRHKP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a target="_blank" rel="noopener" href="http://www.biaobaishike.com/web.php?id=NMlEl8m"><span>I</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="noopener" href="http://www.biaobaishike.com/web.php?id=NMlEl8m"><span>YOU</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/dist/music.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
