@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.jpg">
+  <link rel="icon" type="image/png" href="/img/favicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>云签到 - LLY&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"BRFdAbhH6nxWqsUkEh2dKLct-gzGzoHsz","app_key":"XrFSg5TT4aAQE0UtW0EkRHKP","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LLY's blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="云签到">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-06-03 00:23" pubdate>
+        2022年6月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">云签到</h1>
+            
+            <div class="markdown-body">
+              <h1 id="超星云签到破解"><a href="#超星云签到破解" class="headerlink" title="超星云签到破解"></a>超星云签到破解</h1><p><a target="_blank" rel="noopener" href="https://github.com/cxOrz/chaoxing-sign-cli">内核：超星学习通签到</a></p>
+<p>基于 React.js, 使用 Material UI 组件库构建。</p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>流程：克隆项目 -&gt; 安装依赖 -&gt; 构建项目 -&gt; 部署</p>
+<p>命令描述：</p>
+<ul>
+<li><code>yarn install</code> ，安装依赖，如果时间太长请尝试挂代理或使用淘宝源。</li>
+<li><code>yarn start</code> ，启动开发服务器，不要忘记把接口服务(另一个仓库)也运行起来。</li>
+<li><code>yarn build</code> ，构建项目，输出到 build 文件夹。</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><code>src/config/api.js</code> ：该文件中配置 <code>baseUrl</code> 变量为接口地址，默认 <code>http://localhost:5000</code> 。若接口部署在服务器，不要忘记将接口地址改为服务器IP或绑定的域名。</p>
+<p><code>src/pages/DashBoard/DashBoard.js</code> ：若使用腾讯云的通用文字识别服务，二维码识别成功率极高，支持PNG、JPG、JPEG、PDF等格式，图片大小不能超过7M。查看此源码文件中的 parseEnc 函数，可注释掉默认识别函数，使用推荐的函数，同时需要在CLI项目中的 <code>src/functions/tencent/QrCodeOCR.js</code> 配置 <code>secretId</code> 和 <code>secretKey</code>。</p>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>使用 <a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/tcb/hosting">腾讯云开发-静态网站托管</a>，将构建的网页部署进去。</p>
+<p>步骤：</p>
+<ol>
+<li>确认已进行过必要的配置，例如接口地址、文字识别服务。</li>
+<li>在本地的项目目录下运行 <code>yarn build</code> 或 <code>npm run build</code> ，将构建网页并输出到 build 目录下。</li>
+<li>将 build 目录内的所有内容（不包括build文件夹），在静态网站托管页面上传。</li>
+<li>通过云开发的默认域名即可访问。</li>
+</ol>
+<p><img src="https://636c-cloudbase-1a4211-1252446325.tcb.qcloud.la/chaoxing-sign-ui/tcb-hosting.png" srcset="/img/loading.gif"></p>
+<h2 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h2><p>欢迎对本仓库提交代码，但在这之前请发起一个Issue描述你想要修改或提供的功能，经过讨论之后再确定是否进行下去，避免辛苦写完代码最终没有得到合并。本项目按照个人意愿进行开发，一些功能以及设计带有个人主观的想法，所以有想法要提交代码的朋友请一定先讨论一下。讨论过后请新建一个分支(以提供的功能命名），并在此分支完成你的代码，提交 pull request。请务必保持代码整洁和 commit 规范。</p>
+<h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p><img src="https://636c-cloudbase-1a4211-1252446325.tcb.qcloud.la/chaoxing-sign-ui/1.png" srcset="/img/loading.gif"><br><img src="https://636c-cloudbase-1a4211-1252446325.tcb.qcloud.la/chaoxing-sign-ui/2.png" srcset="/img/loading.gif"><br><img src="https://636c-cloudbase-1a4211-1252446325.tcb.qcloud.la/chaoxing-sign-ui/4.png" srcset="/img/loading.gif"></p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>非常感谢超星学习通，实践出真知。</p>
+
+        <div id="aplayer-TkYGVHka" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content">[ti:�п����ʹ�ΥƩ`�� (Cruel Angel's Thesis) (Ambivalence Mix) (�������͸���սʿ��TV����Ƭͷ��)]
+[ar:�ߘ����� (�����Ϥ� �褦��)]
+[al:&#12316;refrain&#12316;]
+[by:]
+[offset:0]
+[kana:1����1����1�Ƥ�1��1����1�Ϥ�1�褦1��1��1����1����1��1��1���礯1��1�Ȥ�1�Ҥ�1�Ȥ�1����1����1�Ƥ�1��1���礦1�ͤ�1����1��1����1����1���1����1�錄��1��1�ۤ�1��1��1���夦1����1�ᤤ1��1�ҤȤ�1��1��1��1�ʤ�1�Ϥ�1��1�餤1��1��1����1����1�Ƥ�1��1�ޤ�1��1��1��1����1����1��1����1��2����1��1������1���礦1�ͤ�1����1��1�ͤ�1�錄��1����1��1���1��1����1��1����1�ۤ�1����1����1�Ĥ�1����1��1����1���夦1�Ȥ�1��1��1��1��1��1�錄��1��1�椦1��1����1����1�Ƥ�1��1����1��1���Τ�1���1��1��1����1�Ҥ���1�Ϥ�1���礦1�ͤ�1����1��1�Ҥ�1����1�줭1��1��1����1�錄��1��1����1����1�Ƥ�1��1�ޤ�1��1��1��1����1����1��1����1��2����1��1������1���礦1�ͤ�1����1��]
+[00:00.00]�п����ʹ�ΥƩ`�� (Cruel Angel's Thesis) (Ambivalence Mix) - �ߘ����� (�����Ϥ� �褦��)
+[00:00.37]�ʣ���������
+[00:00.46]��������Ӣ��
+[00:00.58]�п����ʹ�Τ褦��
+[00:06.43]����� ��Ԓ�ˤʤ�
+[00:22.28]�n���L������
+[00:25.39]�ؤΥɥ���ߵ���Ƥ�
+[00:29.10]˽�����򤿤�Ҋ�Ĥ��
+[00:32.89]΢Ц��Ǥ뤢�ʤ�
+[00:37.27]���äȤդ����
+[00:40.29]��Ȥ�뤳�Ȥˉ��Ф�
+[00:44.07]�\�������ޤ�֪��ʤ�
+[00:47.88]����������ͫ
+[00:51.79]�����ɤ��Ĥ��ݸ����Ǥ��礦
+[00:55.54]���α��Фˤ�
+[00:59.30]ң��δ�� �ᤶ�������
+[01:03.05]��������뤳��
+[01:06.65]�п����ʹ�ΥƩ`��
+[01:10.56]���x����䤬���w������
+[01:14.26]�ۤȤФ���ᤤ�ѥȥ���
+[01:18.04]˼�������Y�Ф�ʤ�
+[01:21.71]��������򱧤����x��
+[01:25.55]����� ��Ԓ�ˤʤ�
+[02:14.65]���ä��ߤäƤ�
+[02:17.76]˽�ΐۤΓe�꤫��
+[02:21.46]���ʤ������� ����ʹ�ߤ�
+[02:25.27]���Ф�볯������
+[02:29.69]�����׽��
+[02:32.75]�¤����꤬ӳ���Ƥ�
+[02:36.50]�����ФΕr��ֹ���
+[02:40.26]�]�����᤿������
+[02:44.16]�⤷��դ���ꤨ�����Ȥ�
+[02:47.94]��ζ������ʤ�
+[02:51.69]˽�Ϥ��� ���ɤ�֪��
+[02:55.50]����ΥХ��֥�
+[02:59.09]�п����ʹ�ΥƩ`��
+[03:02.88]�����ߤ������ƤϤ��ޤ�
+[03:06.69]�������᤿���Τ�����
+[03:10.46]���Ή���Ŀҙ�᤿�Ȥ�
+[03:14.12]�l������Ť�
+[03:17.86]����� ��Ԓ�ˤʤ�
+[03:21.63]�ˤϐۤ�Ĥम�ʤ���
+[03:25.42]�sʷ��Ĥ���
+[03:29.15]Ů��ʤ�Ƥʤ�ʤ��ޤ�
+[03:32.94]˽��������
+[03:36.60]�п����ʹ�ΥƩ`��
+[03:40.36]���x����䤬���w������
+[03:44.12]�ۤȤФ���ᤤ�ѥȥ���
+[03:47.88]˼�������Y�Ф�ʤ�
+[03:51.61]��������򱧤����x��
+[03:55.24]����� ��Ԓ�ˤʤ�</pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-TkYGVHka"),
+            narrow: false,
+            autoplay: false,
+            showlrc: 2,
+            music: {
+              title: "高橋洋子 (たかはし ようこ) - 残酷な天使のテーゼ (Ambivalence Mix)",
+              author: "高橋洋子 (たかはし ようこ)",
+              url: "b.mp3",
+              pic: "/2022/06/03/base%20-%20副本%20-%20副本/b.jpg",
+              lrc: "b.lrc"
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/09/07/base%20-%20%E5%89%AF%E6%9C%AC/">
+                        <span class="hidden-mobile">语言基础</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "BRFdAbhH6nxWqsUkEh2dKLct-gzGzoHsz",
+          app_key: "XrFSg5TT4aAQE0UtW0EkRHKP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a target="_blank" rel="noopener" href="http://www.biaobaishike.com/web.php?id=NMlEl8m"><span>I</span></a> <i class="iconfont icon-love"></i> <a target="_blank" rel="noopener" href="http://www.biaobaishike.com/web.php?id=NMlEl8m"><span>YOU</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/dist/music.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
